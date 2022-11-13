@@ -8,7 +8,7 @@ import com.google.auto.service.AutoService
  * Author: xuhuanli@lollitech.com
  */
 
-@AutoService(IBook::class)
+//@AutoService(IBook::class)
 class BookC: IBook {
     override fun name(): String {
         return "BookC"
