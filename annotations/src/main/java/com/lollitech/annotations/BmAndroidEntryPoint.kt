@@ -1,13 +1,11 @@
 package com.lollitech.annotations
 
-import kotlin.reflect.KClass
-
 /**
  * Copyright (c) 2022-11, lollitech
  * All rights reserved
  * Author: xuhuanli@lollitech.com
  */
 
-@Retention(AnnotationRetention.RUNTIME)
+@Retention(AnnotationRetention.BINARY)
 @Target(AnnotationTarget.TYPE)
-annotation class BmAndroidApp(val value: KClass<*> = Void::class)
+annotation class BmAndroidEntryPoint(val value: Int = 0)
