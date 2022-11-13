@@ -149,6 +149,7 @@ class BmProcessor : AbstractProcessor() {
     }
 
     private fun genKotlinFile(roundEnv: RoundEnvironment) {
+//        messager.printMessage(Diagnostic.Kind.NOTE, TAG + "genKotlinFile")
         val elements = roundEnv.getElementsAnnotatedWith(BindClass::class.java)
         val elementUtils = processingEnv.elementUtils
         elements.forEach {
@@ -184,8 +185,8 @@ class BmProcessor : AbstractProcessor() {
             // 指定生成的目录
             try {
                 val kaptKotlinGeneratedDir = processingEnv.options["kapt.kotlin.generated"]
-                val options = processingEnv.options[AROUTER_MODULE_NAME]
-                messager.printMessage(Diagnostic.Kind.NOTE, TAG + options)
+//                val options = processingEnv.options[AROUTER_MODULE_NAME]
+//                messager.printMessage(Diagnostic.Kind.NOTE, TAG + options)
                 val outputFile = File(kaptKotlinGeneratedDir).apply {
                     mkdirs()
                 }

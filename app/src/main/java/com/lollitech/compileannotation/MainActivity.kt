@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        MainActivity_bindView.bindView(this)
         setContentView(R.layout.activity_main)
         tv1
     }
